@@ -1,0 +1,9 @@
+{
+    "require": {
+        "altorouter/altorouter": "1.2.0",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}

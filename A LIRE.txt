@@ -1,0 +1,5 @@
+Ne pas oublier d'installer depuis npm alto router
+
+
+
+CMD = composer require altorouter/altorouter:1.2.0 <<< Dans le terminal
