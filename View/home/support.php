@@ -22,7 +22,7 @@ if (isset($_GET['error']) && intval($_GET['error']) === 1){
 <?php
 if (isset($_SESSION['authenticated'])) {?>
     <div class="main">
-        <div class="login">
+        <div class="login" id="support">
             <form action="/checkSupport" method="post">
                 <label for="chk" aria-hidden="true">Contacter le support</label>
                 <input type="email" name="email" placeholder="Adresse mail" required="">

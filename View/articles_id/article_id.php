@@ -27,8 +27,11 @@ use App\Model\Manager\ArticleManager;
                 <input type="text" name="prix" style="display: none" value="<?= $params['articles']->getPrix()?>">
                 <input type="text" name="quantite" style="display: none" value="1">
                 <?php if ($_SESSION['authenticated']) { ?>
-                    <input type="submit" name="submit" value="Ajouter au panier" style="width: 30%; cursor:pointer;">
-                <?php } ?>
+                    <input type="submit" name="submit" id="input" value="Ajouter au panier">
+                <?php }
+                else {
+                    header("Location: " . $_SERVER["HTTP_REFERER"]);
+                }?>
             </form>
         </div>
 </div>

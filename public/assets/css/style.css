@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
 
 * {
     padding: 0;
@@ -11,7 +12,7 @@
 body{
     font-family: 'Titillium Web', sans-serif;
     width: 100%;
-    background-color: beige;
+    background-image: radial-gradient(circle at 104.17% 4.55%, #c7dfcd 0, #c4e0d0 3.33%, #c1e0d4 6.67%, #bee1d7 10%, #bce1da 13.33%, #bbe1de 16.67%, #bae1e1 20%, #bae0e4 23.33%, #bae0e7 26.67%, #bbdfea 30%, #bddfec 33.33%, #bfdeee 36.67%, #c2ddf0 40%, #c5dcf1 43.33%, #c9dbf2 46.67%, #cddaf2 50%, #d1d9f2 53.33%, #d5d8f1 56.67%, #dad7f0 60%, #ded6ee 63.33%, #e2d5ec 66.67%, #e6d4ea 70%, #e9d3e7 73.33%, #ecd2e4 76.67%, #efd1e1 80%, #f1d1dd 83.33%, #f3d1da 86.67%, #f4d1d6 90%, #f4d1d3 93.33%, #f4d1d0 96.67%, #f4d2cd 100%);
 }
 
 
@@ -58,15 +59,21 @@ body{
     border-radius: 2%;
 }
 
+#support {
+    margin-top: 5%;
+}
+
 .login{
     color: antiquewhite;
-    background-color: #d28e56;
+    background-image: radial-gradient(circle at 50% -20.71%, #85a4df 0, #687ba1 50%, #4c5467 100%);
     margin-top: 15%;
     text-align: center;
     width: 20%;
     margin-left: 40%;
     border: #2f2f2f solid 2px;
     border-radius: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 input{
@@ -110,7 +117,8 @@ label {
 }
 
 footer {
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-bottom: 2%;
     text-align: center;
 }
 
@@ -166,6 +174,18 @@ h1, h3
     text-align:center;
 }
 
+.titre-mentions {
+    font-size: 200%;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+}
+
+.mentions {
+    text-transform: uppercase;
+    font-size: 120%;
+    font-family: 'Merriweather', serif;
+}
+
 h3 {
     margin-left: 2%;
     width: 96%;
@@ -201,19 +221,99 @@ p {
 
 .navbar {
     width: 100%;
-    background-color: black;
-    padding: 2%;
     display: flex;
     text-align: center;
+    padding-left: 10%;
+    margin-top: 2%;
+    margin-left: -5%;
 }
 
-.navbar span i {
-    padding: 1%;
+#input {
+    width: 15%;
+    cursor:pointer;
+    background-color: transparent;
+    color: black;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
 }
+
+#input:hover {
+    background-color: #9fcdff;
+}
+
 
 .navbar span a {
     text-align: center;
-    color: antiquewhite;
+    color: black;
+}
+
+.navbar span {
+    padding: 0.2%;
+    border-radius: 6%;
+}
+
+.playstation :hover {
+    background:-webkit-linear-gradient(top, #076aff 30%, #9494f1 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.xbox2 :hover {
+    background:-webkit-linear-gradient(top, #20ff07 30%, #b1ffa6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.pc2 :hover {
+    background:-webkit-linear-gradient(top, #c4c4c4 30%, #505050 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.support2 :hover {
+    background:-webkit-linear-gradient(top, #ff8b07 30%, #ffe3c5 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.connexion2 :hover {
+    background:-webkit-linear-gradient(top, #2e5948 30%, #0f6048 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.deconnexion2 :hover {
+    background:-webkit-linear-gradient(top, #ff5252 30%, #ff9292 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.inscription2 :hover {
+    background:-webkit-linear-gradient(top, #2e5948 30%, #0f6048 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.profile2 :hover {
+    background:-webkit-linear-gradient(top, #000000 30%, #626262 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.panier2 :hover {
+    background:-webkit-linear-gradient(top, #964913 30%, #c98846 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 #login {
@@ -273,13 +373,26 @@ li {
     list-style-type: none;
 }
 
-#panier {
-    margin-left: 20%;
+#delete {
+    width: 30%;
 }
+
 
 .panier {
     margin-top: 5%;
-    margin-left: 20%;
+    background-image: radial-gradient(circle at 50% -20.71%, #85a4df 0, #687ba1 50%, #4c5467 100%);
+    border-radius: 2%;
+    padding: 0.5%;
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: -3%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#paiement {
+    width: 30%;
+    margin-left: 35%;
 }
 
 .article_psn {

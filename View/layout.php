@@ -33,28 +33,28 @@ $userIsAdmin = $userManager->isAdmin($user);
 
 <body>
 <div class="navbar">
-    <span><a href="/playstation/1" id="articles" title="playstation">Playstation <i
+    <span class="playstation"><a href="/playstation/1" id="articles" title="playstation">Playstation <i
                     class="fa-brands fa-playstation"></i></a></span>
-    <span><a href="/xbox/2" id="articles" title="xbox">Xbox <i class="fa-brands fa-xbox"></i></a></span>
-    <span><a href="/pc" id="articles" title="pc">PC <i class="fa-solid fa-computer"></i></a></span>
-    <span><a href="/support" id="articles" title="support">Support <i class="fa-solid fa-headset"></i></a></span>
+    <span class="xbox2"><a href="/xbox/2" id="articles" title="xbox">Xbox <i class="fa-brands fa-xbox"></i></a></span>
+    <span class="pc2"><a href="/pc" id="articles" title="pc">PC <i class="fa-solid fa-computer"></i></a></span>
+    <span class="support2"><a href="/support" id="articles" title="support">Support <i class="fa-solid fa-headset"></i></a></span>
     <?php
     // If the user is logged in, they see the Logout and Profile buttons, otherwise they see the Sign Up and Sign In buttons
     if (isset($_SESSION["authenticated"])) { ?>
-        <span><a href="/logout" id="articles" title="deconnexion">Déconnexion <i
+        <span class="deconnexion2"><a href="/logout" id="articles" title="deconnexion">Déconnexion <i
                         class="fa-solid fa-person-walking-arrow-right"></i></a></span>
-        <span><a href="/myprofile/<?php echo $_SESSION['id']; ?>" id="articles" title="playstation">Profil <i
+        <span class="profile2"><a href="/myprofile/<?php echo $_SESSION['id']; ?>" id="articles" title="playstation">Profil <i
                         class="fa-solid fa-user"></i></a></span>
     <?php } else { ?>
-        <span><a href="/login" id="articles" title="connexion">Connexion <i
+        <span class="connexion2"><a href="/login" id="articles" title="connexion">Connexion <i
                         class="fa-solid fa-right-to-bracket"></i></a></span>
-        <span><a href="/register" id="articles" title="inscription">Inscription <i
+        <span class="inscription2"><a href="/register" id="articles" title="inscription">Inscription <i
                         class="fa-solid fa-right-to-bracket"></i></a></span>
     <?php } ?>
     <?php
     // If the user is logged in, they see the Cart button
     if (isset($_SESSION["authenticated"])) { ?>
-        <span><a href="/panier" id="articles" title="panier">Panier <i
+        <span class="panier2"><a href="/panier" id="articles" title="panier">Panier <i
                         class="fa-solid fa-basket-shopping"></i></a></span>
     <?php } ?>
 </div>

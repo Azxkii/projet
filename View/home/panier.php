@@ -27,26 +27,28 @@ if (isset($_SESSION['id'])){
 // Afficher les articles du panier
         foreach ($articles as $article) {
             ?>
-            <div class="panier">
+            <div class="check">
+                    <div class="panier">
+                    <?php
+                    echo "Article : " . $article['title'] . "<br>";
+                    echo "Prix : " . $article['prix'] . "€<br>";
+                    echo "Quantité : " . $article['quantite'] . "<br><br>";
+                    $total += $article['prix'];
+                    ?>
+                    <form action="/deletePanier/<?= $article['id_article']?>" method="post">
+                    <input type="submit" name="submit" value="Supprimer" id="delete">
+                    </form>
+                    </div>
                 <?php
-                echo "Article : " . $article['title'] . "<br>";
-                echo "Prix : " . $article['prix'] . "€<br>";
-                echo "Quantité : " . $article['quantite'] . "<br><br>";
-                $total += $article['prix'];
-                ?>
-                <form action="/deletePanier/<?= $article['id_article']?>" method="post">
-                    <input type="submit" name="submit" value="Supprimer">
+            }
+            ?>
+                <div class="total_panier">
+                <h1>TOTAL : <?php echo $total . "€"; ?></h1>
+                </div>
+                <form action="/paiement" method="post" id="panier">
+                <input type="submit" value="Paiement" id="paiement">
                 </form>
             </div>
-            <?php
-        }
-        ?>
-        <div class="total_panier">
-            <h1>TOTAL : <?php echo $total . "€"; ?></h1>
-        </div>
-        <form action="/paiement" method="post" id="panier">
-            <input type="submit" value="Paiement">
-        </form>
 <?php }
     else {
         Header("Location: /panier?error=1");

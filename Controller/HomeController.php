@@ -22,6 +22,11 @@ class HomeController extends AbstractController
         $this->display('register/verification');
     }
 
+    public function indexMentions()
+    {
+        $this->display('home/mentions');
+    }
+
     public function indexPC()
     {
         $this->display('articles/pc');
